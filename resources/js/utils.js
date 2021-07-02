@@ -1,4 +1,4 @@
-define(['ojs/ojarraydataprovider', 'resources/js/xlsx.js'], function (ArrayDataProvider, XLSX) {
+define(['ojs/ojarraydataprovider', 'xlsx.js'], function (ArrayDataProvider, XLSX) {
   'use strict';
   var exports = {};
 
