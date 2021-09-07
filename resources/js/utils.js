@@ -37,7 +37,7 @@ define(['ojs/ojarraydataprovider', 'xlsx.js'], function (ArrayDataProvider, XLSX
       }
       result.push(obj);
     }
-    return result; //JavaScript object
+    return result; //JavaScript object'i
   }
 
 
@@ -143,7 +143,7 @@ define(['ojs/ojarraydataprovider', 'xlsx.js'], function (ArrayDataProvider, XLSX
   };
 
   /**
-    * Verilen sayıyı verilen para biriminde formatlayıp döndürür.
+    * Verilen sayıyı verilen para biriminde yakışıklılaştırır.
     * @param { number }  amount            Objeler dizisi
     */
   function formatCurrency(amount, currency) {
@@ -155,7 +155,7 @@ define(['ojs/ojarraydataprovider', 'xlsx.js'], function (ArrayDataProvider, XLSX
   };
 
   /**
-    * Evrensel Benzersiz ID oluşturur.
+    * Evrensel Benzersiz ID oluşturur (UUIDv4).
     */
   function generateUUIDv4() {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g,
@@ -185,17 +185,19 @@ define(['ojs/ojarraydataprovider', 'xlsx.js'], function (ArrayDataProvider, XLSX
     return n < 10 ? '0' + n : n;
   };
 
-  exports.csvToJSON = csvToJSON;
-  exports.exportToCsvFile = exportToCsvFile;
-  exports.openOrCloseDialog = openOrCloseDialog;
-  exports.generateADP = generateADP;
-  exports.arrayizer = arrayizer;
-  exports.formatCurrency = formatCurrency;
-  exports.generateUUIDv4 = generateUUIDv4;
-  exports.generateNowString = generateNowString;
-  exports.getCurrentDate = getCurrentDate;
-  exports.pad2 = pad2;
-  exports.exportXLSX = exportXLSX;
+  exports = {
+    csvToJSON : csvToJSON,
+    exportToCsvFile : exportToCsvFile,
+    openOrCloseDialog : openOrCloseDialog,
+    generateADP : generateADP,
+    arrayizer : arrayizer,
+    formatCurrency : formatCurrency,
+    generateUUIDv4 : generateUUIDv4,
+    generateNowString : generateNowString,
+    getCurrentDate : getCurrentDate,
+    pad2 : pad2,
+    exportXLSX : exportXLSX
+  }
 
   return exports;
 });
